@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    /* ## Colors */
+    /* ### Primary */
+--Cyan: hsl(179, 62%, 43%);
+--lt-cyan:#4abebd;
+--Bright-Yellow: hsl(71, 73%, 54%);
+
+/* ### Neutral */
+
+--Light-Gray: hsl(204, 43%, 93%);
+--Grayish-Blue: hsl(218, 22%, 67%);
+}
+body{
+    font-size: 16px;
+    font-family: 'Karla',sans-serif;
+}
+li,ul{
+    list-style-type: none;
+
+}
+main{
+    background-color: var(--Light-Gray);
+    padding: 100px 30px 75px 30px;
+}
+.card{
+    padding: 1rem;
+    line-height: 1.6;
+}
+#join{
+    background-color: white;
+
+}
+#join h1{
+    color: var(--Cyan);
+    font-size: large;
+}
+#join h2{
+    color: var(--Bright-Yellow);
+    font-size: large;
+}
+#join p{
+    color: var(--Grayish-Blue);
+    font-size: small;
+}
+#join h1,#join h2, #join p{
+    margin-bottom: 1.5rem;
+}
+#subscription{
+    background-color: var(--Cyan);
+}
+.price{
+    display: flex;
+    align-items: center;
+}
+#subscription span{
+    color: rgba(255,255,255,0.5);
+}
+#subscription span.dollar{
+    color: var(--Light-Gray);
+    font-size: x-large;
+    font-weight: 700;
+    margin-right: 1rem;
+}
+#subscription p{
+    color: var(--Light-Gray);
+    margin-bottom: 1rem;
+}
+#subscription a{
+    text-decoration: none;
+    color: var(--Light-Gray);
+    background-color: var(--Bright-Yellow);
+    display: inline-block;
+    width:100%;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+}
+#why-us{
+    background-color: var(--lt-cyan);
+}
+#why-us h2, #subscription h2{
+    color: var(--Light-Gray);
+    font-size: large;
+}
+#why-us li{
+    color: var(--Light-Gray);
+    font-size: small;
+}
+@media (min-width:990px){
+    main{
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+    }
+    #join{
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+}
