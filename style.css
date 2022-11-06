@@ -7,14 +7,13 @@
 :root{
     /* ## Colors */
     /* ### Primary */
---Cyan: hsl(179, 62%, 43%);
---lt-cyan:#4abebd;
---Bright-Yellow: hsl(71, 73%, 54%);
+    --Cyan: hsl(179, 62%, 43%);
+    --lt-cyan:#4abebd;
+    --Bright-Yellow: hsl(71, 73%, 54%);
 
-/* ### Neutral */
-
---Light-Gray: hsl(204, 43%, 93%);
---Grayish-Blue: hsl(218, 22%, 67%);
+    /* ### Neutral */
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
 }
 body{
     font-size: 16px;
@@ -23,14 +22,11 @@ body{
     display: flex;
     flex-direction: column;
     padding: 100px 30px 75px 30px;
-
 }
 li,ul{
     list-style-type: none;
-
 }
 main{
-    /* background-color: var(--Light-Gray); */
     max-width: 626px;
     margin: 0 auto;
     border-radius: 0.5rem;
@@ -57,10 +53,7 @@ main{
     color: var(--Grayish-Blue);
     font-size: small;
 }
-#join h1{
-    margin-bottom: 1.25rem;
-}
-#join h2, #join p{
+#join h2, #join p,#join h1{
     margin-bottom: 1.25rem;
 }
 #subscription{
@@ -82,6 +75,7 @@ main{
 #subscription p{
     color: var(--Light-Gray);
     margin-bottom: 1rem;
+    font-size: 0.95rem;;
 }
 #subscription a{
     text-decoration: none;
@@ -108,9 +102,10 @@ main{
 @media (min-width:900px){
     main{
         display:grid;
-        /* grid-template-columns: repeat(2,1fr);
-        grid-template-rows: repeat(2,1fr); */
-        grid: repeat(2,1fr)/repeat(2,1fr);
+        grid: repeat(2,auto)/repeat(2,1fr);
+    }
+    .card{
+        padding:2.375rem;
     }
     #join{
         grid-column: 1/3;
