@@ -19,14 +19,21 @@
 body{
     font-size: 16px;
     font-family: 'Karla',sans-serif;
+    background-color: var(--Light-Gray);
+    display: flex;
+    flex-direction: column;
 }
 li,ul{
     list-style-type: none;
 
 }
 main{
-    background-color: var(--Light-Gray);
+    /* background-color: var(--Light-Gray); */
     padding: 100px 30px 75px 30px;
+    max-width: 626px;
+    margin: 0 auto;
+    border-radius: 1rem;
+    overflow: hidden;
 }
 .card{
     padding: 1rem;
@@ -38,18 +45,22 @@ main{
 }
 #join h1{
     color: var(--Cyan);
-    font-size: large;
+    font-size:large;
+    font-weight: 700;
 }
 #join h2{
     color: var(--Bright-Yellow);
-    font-size: large;
+    font-size: medium;
 }
 #join p{
     color: var(--Grayish-Blue);
     font-size: small;
 }
-#join h1,#join h2, #join p{
-    margin-bottom: 1.5rem;
+#join h1{
+    margin-bottom: 1.25rem;
+}
+#join h2, #join p{
+    margin-bottom: 1.25rem;
 }
 #subscription{
     background-color: var(--Cyan);
@@ -87,16 +98,18 @@ main{
 #why-us h2, #subscription h2{
     color: var(--Light-Gray);
     font-size: large;
+    margin-bottom: 1rem;;
 }
 #why-us li{
     color: var(--Light-Gray);
     font-size: small;
 }
-@media (min-width:990px){
+@media (min-width:900px){
     main{
         display:grid;
-        grid-template-columns: repeat(2,1fr);
-        grid-template-rows: repeat(2,1fr);
+        /* grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr); */
+        grid: repeat(2,1fr)/repeat(2,1fr);
     }
     #join{
         grid-column: 1/3;
